@@ -3,7 +3,7 @@ author: >
   <a href="mailto:lbarosi@df.ufcg.edu.br</a> ,
   Universidade Federal de Campina Grande, Brasil
 copyright: '2025–2034'
-logo: img/frontmatter/UAF_LOG).png
+logo: img/frontmatter/UAF_LOGO.png
 
 exclude_patterns:
   - .DS_Store
