@@ -1,0 +1,10 @@
+jupyter-book
+lxml[html_clean]
+sphinx-prolog
+sphinx-design
+sphinx-copybutton
+sphinx-pyscript
+sphinx-togglebutton
+sphinxcontrib.mermaid
+nbsphinx
+sphinx_proof
