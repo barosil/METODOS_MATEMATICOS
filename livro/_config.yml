@@ -79,9 +79,9 @@ sphinx:
     numfig_format:
       figure: "Figure %s"
     numfig_secnum_depth: 1
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    copybutton_prompt_text: "\\s*\\?\\s*-\\s*"
-    copybutton_prompt_is_regexp: true
-    copybutton_only_copy_prompt_lines: false
-    copybutton_remove_prompts: true
-    copybutton_selector: "div.highlight:not(.extract):not(.swish) > pre"
+    # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # copybutton_prompt_text: "\\s*\\?\\s*-\\s*"
+    # copybutton_prompt_is_regexp: true
+    # copybutton_only_copy_prompt_lines: false
+    # copybutton_remove_prompts: true
+    # copybutton_selector: "div.highlight:not(.extract):not(.swish) > pre"
