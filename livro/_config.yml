@@ -10,32 +10,26 @@ author: >
   <a href="mailto:lbarosi@df.ufcg.edu.br</a> ,
   Universidade Federal de Campina Grande, Brasil
 copyright: '2025–2034'
-logo: img/frontmatter/UAF_LOGO.png
+logo: imgs/frontmatter/UAF_LOGO.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: metodos_matematicos.tex
+# latex:
+  # latex_documents:
+  #   targetname: metodos_matematicos.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
 
-# Information about where the book exists on the web
 repository:
-  url: git@github.com:barosil/METODOS_MATEMATICOS.git  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/barosil/METODOS_MATEMATICOS.git  # Use HTTPS em vez de SSH
+  path_to_book: "livro"  # Mantenha como está se este for o caminho correto
+  branch: main  # Mantenha como está
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
 
 exclude_patterns:
   - .DS_Store
@@ -62,26 +56,52 @@ sphinx:
     - sphinx_prolog.swish
     - sphinx_prolog.pprolog
     - sphinx_proof
+    - sphinx.ext.imgconverter
+    - sphinx_copybutton
+
+
+#######################################################################################
+# HTML-specific settings
+html:
+  copybutton_prompt_text : r">>> |\.\.\. "
+  copybutton_prompt_is_regexp : True
+  copybutton_exclude : "style"
+  html_theme: pydata_sphinx_theme
+  theme: sphinx_book_theme  # The theme to use for HTML builds
+  favicon                   : ""  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : true  # Whether to add a link to your repository button
+  # use_issues_button         : false  # Whether to add an "open an issue" button
+  use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  # analytics:
+  #   plausible_analytics_domain: ""
+  #   plausible_analytics_url: "https://plausible.io/js/script.js"
+  #   google_analytics_id       : ""  # A GA id that can be used to track book views.
+
+  comments:
+    hypothesis              : false
+    utterances              : false
+  announcement              : "" # A banner announcement at the top of the site.
+
+#######################################################################################
+# LaTeX-specific settings
+# latex:
+#   latex_engine              : pdflatex  # one of 'pdflatex', 'xelatex' (recommended for unicode), 'luatex', 'platex', 'uplatex'
+#   use_jupyterbook_latex     : true # use sphinx-jupyterbook-latex for pdf builds as default
+#   latex_documents:
+#     targetname: metodos_matematicos.tex
+
+#######################################################################################
+# Launch button settings
+# launch_buttons:
+#   notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+#   binderhub_url             : ""  # The URL of the BinderHub (e.g., https://mybinder.org)
+#   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+#   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+#   colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
+#   deepnote_url              : "" # The URL of Deepnote (https://deepnote.com)
 
     
-  config:
-    html_theme_options:
-      use_edit_page_button: true
-      use_repository_button: true
-      use_issues_button: true
-      show_toc_level: 2
-      navigation_depth: 2
-      collapse_navigation: false
-      navigation_with_keys: true
-      logo_only: false
-      display_version: true
-      show_navbar_depth: 1
-    numfig_format:
-      figure: "Figure %s"
-    numfig_secnum_depth: 1
-    # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    # copybutton_prompt_text: "\\s*\\?\\s*-\\s*"
-    # copybutton_prompt_is_regexp: true
-    # copybutton_only_copy_prompt_lines: false
-    # copybutton_remove_prompts: true
-    # copybutton_selector: "div.highlight:not(.extract):not(.swish) > pre"

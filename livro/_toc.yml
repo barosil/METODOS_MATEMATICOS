@@ -2,15 +2,17 @@ format: jb-book
 root: README
 
 chapters:
-- file: Integral_Gaussiana/00_apresentacao
-- file: Integral_Gaussiana/01-contexto-galton
-- file: Integral_Gaussiana/02-historico-gaussiana
-- file: Integral_Gaussiana/03-distribuicoes
+- file: capitulos/00-introducao
+- file: capitulos/01-integrais-gaussianas
   sections:
-  - file: Integral_Gaussiana/03-01-medidas
-  - file: Integral_Gaussiana/03-02-probabilidade
-- file: Integral_Gaussiana/04-integral-gaussiana
-- file: Integral_Gaussiana/05-extensoes
-- file: Integral_Gaussiana/06-funcao-gama
-- file: Integral_Gaussiana/07-stirling
-- file: Integral_Gaussiana/08-integral-ndimensoes
+  - file: capitulos/01-integrais-gaussianas/01-contexto-galton
+  - file: capitulos/01-integrais-gaussianas/02-historico-gaussiana
+  - file: capitulos/01-integrais-gaussianas/03-distribuicoes
+    sections:
+    - file: capitulos/01-integrais-gaussianas/03-01-medidas
+    - file: capitulos/01-integrais-gaussianas/03-02-probabilidade
+  - file: capitulos/01-integrais-gaussianas/04-integral-gaussiana
+  - file: capitulos/01-integrais-gaussianas/05-extensoes
+  - file: capitulos/01-integrais-gaussianas/06-funcao-gama
+  - file: capitulos/01-integrais-gaussianas/07-stirling
+  - file: capitulos/01-integrais-gaussianas/08-integral-ndimensoes
