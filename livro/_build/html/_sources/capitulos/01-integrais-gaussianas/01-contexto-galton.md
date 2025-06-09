@@ -4,7 +4,7 @@
 Tabuleiro de Galton
 +++
 
-```{figure} imgs/galton-board.png
+```{figure} imgs/content/cap-01/galton_board.png
 :width: 60%
 :name: galton-board
 Tabuleiro de Galton ilustrando a convergência da distribuição binomial para a normal.

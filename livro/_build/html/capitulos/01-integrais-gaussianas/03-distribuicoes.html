@@ -32,12 +32,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-prolog.css?v=c1617293" />
     <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui.min.css?v=711a7f8d" />
     <link rel="stylesheet" type="text/css" href="../../_static/lpn.css?v=a05dc249" />
-    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -69,7 +69,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'capitulos/01-integrais-gaussianas/03-distribuicoes';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Conceitos Fundamentais: Teoria de Conjuntos, Medidas e Integração" href="03-01-medidas.html" />
+    <link rel="next" title="Conceitos Fundamentais:" href="03-01-medidas.html" />
     <link rel="prev" title="Histórico da Distribuição Normal" href="02-historico-gaussiana.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,7 +184,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../README.html">
-                    LIVRO
+                    Métodos de Física Matemática
                 </a>
             </li>
         </ul>
@@ -364,12 +364,16 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Distribuições de Probabilidade</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#capitulo-03-conceitos-fundamentais">Capítulo 03: Conceitos Fundamentais</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-poisson">Distribuição de Poisson</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-normal-gaussiana">Distribuição Normal (Gaussiana)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conceitos Fundamentais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-discretas-e-continuas">Distribuições Discretas e Contínuas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-binomial">Distribuição Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-poisson">Distribuição de Poisson</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-normal-gaussiana">Distribuição Normal (Gaussiana)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-teorema-central-do-limite">O Teorema Central do Limite</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apendices">Apêndices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medida-e-integracao"><span class="xref myst">Medida e Integração</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidade"><span class="xref myst">Probabilidade</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medida-integracao-e-probabilidades"><span class="xref myst">Medida, Integração e Probabilidades</span></a></li>
 </ul>
 </li>
 </ul>
@@ -392,136 +396,164 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="capitulo-03-conceitos-fundamentais">
 <h1>Capítulo 03: Conceitos Fundamentais<a class="headerlink" href="#capitulo-03-conceitos-fundamentais" title="Link to this heading">#</a></h1>
 <p>Este capítulo apresenta os conceitos essenciais que servem como base matemática para o estudo das distribuições de probabilidade, integrais especiais e métodos estatísticos aplicados à física e outras áreas da ciência.</p>
-<p>Consulte também:</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Click here!</p>
-<h1 class="rubric" id="conceitos-fundamentais-teoria-de-conjuntos-medidas-e-integracao">Conceitos Fundamentais: Teoria de Conjuntos, Medidas e Integração</h1>
-<div class="definition docutils">
+<h1 class="rubric" id="conceitos-fundamentais">Conceitos Fundamentais:</h1>
+<h2 class="rubric" id="teoria-de-conjuntos-medidas-e-integracao">Teoria de Conjuntos, Medidas e Integração</h2>
+<div class="md docutils">
+<div class="proof definition admonition" id="topologia">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<section class="definition-content" id="proof-content">
 <p>Uma <strong>topologia</strong> em um conjunto <span class="math notranslate nohighlight">\(X\)</span> é uma coleção <span class="math notranslate nohighlight">\(\mathcal{T} \subseteq 2^X\)</span> de subconjuntos de <span class="math notranslate nohighlight">\(X\)</span>, chamados de abertos, tal que:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\emptyset, X \in \mathcal{T}\)</span>;</p></li>
 <li><p>A união arbitrária de conjuntos em <span class="math notranslate nohighlight">\(\mathcal{T}\)</span> pertence a <span class="math notranslate nohighlight">\(\mathcal{T}\)</span>;</p></li>
 <li><p>A interseção finita de conjuntos em <span class="math notranslate nohighlight">\(\mathcal{T}\)</span> também pertence a <span class="math notranslate nohighlight">\(\mathcal{T}\)</span>.</p></li>
 </ol>
-</div>
-<div class="definition docutils">
+</section>
+</div></div>
+<div class="md docutils">
+<div class="proof definition admonition" id="sigma-algebra">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<section class="definition-content" id="proof-content">
 <p>Uma <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-álgebra</strong> sobre um conjunto <span class="math notranslate nohighlight">\(X\)</span> é uma coleção <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq 2^X\)</span> tal que:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(X \in \mathcal{F}\)</span>;</p></li>
 <li><p>Se <span class="math notranslate nohighlight">\(A \in \mathcal{F}\)</span>, então <span class="math notranslate nohighlight">\(A^c \in \mathcal{F}\)</span>;</p></li>
 <li><p>Se <span class="math notranslate nohighlight">\(A_1, A_2, \ldots \in \mathcal{F}\)</span>, então <span class="math notranslate nohighlight">\(\bigcup_{i=1}^\infty A_i \in \mathcal{F}\)</span>.</p></li>
 </ol>
-</div>
-<div class="definition docutils">
-<p>Uma <strong>medida</strong> é uma função <span class="math notranslate nohighlight">\(\mu : \mathcal{F} \to [0, \infty]\)</span> definida em uma <span class="math notranslate nohighlight">\(\sigma\)</span>-álgebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, tal que:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\mu(\emptyset) = 0\)</span>;# Conceitos Fundamentais: Probabilidade e Estatística</p></li>
-</ul>
-<div class="definition docutils">
-<p>O <strong>espaço amostral</strong> <span class="math notranslate nohighlight">\(\Omega\)</span> é o conjunto de todos os resultados possíveis de um experimento aleatório.</p>
-</div>
-</div>
-<div class="definition docutils">
-<p>Uma <strong>variável aleatória</strong> é uma função mensurável <span class="math notranslate nohighlight">\(X : \Omega \to \mathbb{R}\)</span>, que associa um número real a cada resultado <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>Uma <strong>medida de probabilidade</strong> <span class="math notranslate nohighlight">\(P\)</span> é uma medida definida sobre uma <span class="math notranslate nohighlight">\(\sigma\)</span>-álgebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> tal que <span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>Uma <strong>distribuição de probabilidade discreta</strong> é uma função <span class="math notranslate nohighlight">\(p: \mathbb{N} \to [0,1]\)</span> tal que <span class="math notranslate nohighlight">\(\sum_i p(i) = 1\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>A <strong>função de distribuição de probabilidade</strong> <span class="math notranslate nohighlight">\(f_X(x)\)</span> descreve a probabilidade de uma variável aleatória <span class="math notranslate nohighlight">\(X\)</span> assumir um valor específico <span class="math notranslate nohighlight">\(x\)</span>: <span class="math notranslate nohighlight">\(P(X = x) = f_X(x)\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>A <strong>função de distribuição acumulada</strong> <span class="math notranslate nohighlight">\(F_X(x)\)</span> é dada por <span class="math notranslate nohighlight">\(F_X(x) = P(X \leq x)\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>Os três axiomas fundamentais da probabilidade são:</p>
+</section>
+</div></div>
+<div class="proof definition admonition" id="medida-integracao">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Medida de Integração)</p>
+<section class="definition-content" id="proof-content">
+<p>Uma <strong>medida de integração</strong> é uma função <span class="math notranslate nohighlight">\(\mu\)</span> que associa a cada conjunto mensurável um número real não-negativo, satisfazendo:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span>;</p></li>
-<li><p>Para eventos disjuntos <span class="math notranslate nohighlight">\(A_i\)</span>, <span class="math notranslate nohighlight">\(P\left(\bigcup_i A_i\right) = \sum_i P(A_i)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu(\emptyset) = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>-aditividade: Para qualquer sequência de conjuntos disjuntos <span class="math notranslate nohighlight">\(\{A_i\}_{i=1}^\infty\)</span>, tem-se <span class="math notranslate nohighlight">\(\mu\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty \mu(A_i)\)</span></p></li>
 </ol>
-</div>
-<div class="definition docutils">
-<p>A <strong>Lei dos Grandes Números</strong> afirma que a média amostral converge para a média esperada quando o número de observações tende ao infinito.</p>
-</div>
-<div class="definition docutils">
-<p>O <strong>Teorema Central do Limite</strong> estabelece que, sob certas condições, a soma de variáveis aleatórias independentes e identicamente distribuídas converge para uma distribuição normal.</p>
-</div>
-<div class="definition docutils">
-<p>Os <strong>momentos</strong> de uma variável aleatória <span class="math notranslate nohighlight">\(X\)</span> são valores esperados de potências de <span class="math notranslate nohighlight">\(X\)</span>: <span class="math notranslate nohighlight">\(E[X^n]\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>A <strong>função geradora de momentos</strong> <span class="math notranslate nohighlight">\(M_X(t)\)</span> é definida como:</p>
-<div class="math notranslate nohighlight">
-\[M_X(t) = E[e^{tX}]\]</div>
-</div>
-<div class="definition docutils">
-<p>A <strong>função característica</strong> <span class="math notranslate nohighlight">\(\varphi_X(t)\)</span> é definida como:</p>
-<div class="math notranslate nohighlight">
-\[\varphi_X(t) = E[e^{itX}]\]</div>
-</div>
-<div class="definition docutils">
-<p>O <strong>Paradoxo de Bertrand</strong> mostra que diferentes métodos de escolher aleatoriamente uma corda em um círculo levam a diferentes probabilidades — destacando ambiguidades na definição de “aleatoriedade”.</p>
-</div>
-<ul>
-<li><p><span class="math notranslate nohighlight">\(\mu\)</span> é <span class="math notranslate nohighlight">\(\sigma\)</span>-aditiva: se <span class="math notranslate nohighlight">\(A_i \in \mathcal{F}\)</span> são disjuntos dois a dois, então
-<span class="math notranslate nohighlight">\(\mu\left( \bigcup_i A_i \right) = \sum_i \mu(A_i)\)</span>.</p>
-<div class="docutils">
-</div>
-</li>
+</section>
+</div><div class="proof definition admonition" id="integracao-lebesgue">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Integração de Lebesgue)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>integração de Lebesgue</strong> é uma generalização da integral de Riemann que permite integrar uma classe mais ampla de funções. Para uma função mensurável <span class="math notranslate nohighlight">\(f\)</span> em um espaço de medida <span class="math notranslate nohighlight">\((X, \mathcal{A}, \mu)\)</span>, a integral de Lebesgue é construída através da aproximação por funções simples.</p>
+</section>
+</div><div class="proof definition admonition" id="espaco-amostral">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Espaço Amostral)</p>
+<section class="definition-content" id="proof-content">
+<p>O <strong>espaço amostral</strong> <span class="math notranslate nohighlight">\(\Omega\)</span> é o conjunto de todos os resultados possíveis de um experimento aleatório. Cada elemento <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span> é chamado de <strong>resultado elementar</strong>.</p>
+</section>
+</div><div class="proof definition admonition" id="variavel-aleatoria">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Variável Aleatória)</p>
+<section class="definition-content" id="proof-content">
+<p>Uma <strong>variável aleatória</strong> <span class="math notranslate nohighlight">\(X\)</span> é uma função mensurável <span class="math notranslate nohighlight">\(X: \Omega \to \mathbb{R}\)</span> que associa a cada resultado elementar <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span> um número real.</p>
+</section>
+</div><div class="proof definition admonition" id="medida-probabilidade">
+<p class="admonition-title"><span class="caption-number">Definition 7 </span> (Medida de Probabilidade)</p>
+<section class="definition-content" id="proof-content">
+<p>Uma <strong>medida de probabilidade</strong> <span class="math notranslate nohighlight">\(P\)</span> é uma medida de integração com <span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span>. Satisfaz:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> para todo <span class="math notranslate nohighlight">\(A \in \mathcal{F}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>-aditividade</p></li>
+</ol>
+</section>
+</div><div class="proof definition admonition" id="distribuicao-discreta">
+<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Distribuição de Probabilidade (Discreta))</p>
+<section class="definition-content" id="proof-content">
+<p>Para uma variável aleatória discreta <span class="math notranslate nohighlight">\(X\)</span>, a <strong>distribuição de probabilidade</strong> é dada pela função <span class="math notranslate nohighlight">\(p_X(x) = P(X = x)\)</span> que satisfaz:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(p_X(x) \geq 0\)</span> para todo <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_x p_X(x) = 1\)</span></p></li>
+</ol>
+</section>
+</div><div class="proof definition admonition" id="funcao-distribuicao">
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Função de Distribuição de Probabilidade)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>função de distribuição</strong> (CDF) de uma variável aleatória <span class="math notranslate nohighlight">\(X\)</span> é definida como:
+$<span class="math notranslate nohighlight">\( F_X(x) = P(X \leq x), \quad x \in \mathbb{R} \)</span>$
+Satisfaz:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to-\infty} F_X(x) = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to+\infty} F_X(x) = 1\)</span></p></li>
+<li><p>Monotonicidade não-decrescente</p></li>
+</ol>
+</section>
+</div><div class="proof definition admonition" id="axiomas-kolmogorov">
+<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Axiomas de Kolmogorov)</p>
+<section class="definition-content" id="proof-content">
+<p>Os <strong>axiomas de probabilidade de Kolmogorov</strong> são:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> para todo evento <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span></p></li>
+<li><p>Para eventos mutuamente exclusivos <span class="math notranslate nohighlight">\(\{A_i\}_{i=1}^\infty\)</span>, <span class="math notranslate nohighlight">\(P\left(\bigcup_{i=1}^\infty A_i\right) = \sum_{i=1}^\infty P(A_i)\)</span></p></li>
+</ol>
+</section>
+</div><div class="proof definition admonition" id="teorema-central-limite">
+<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Teorema Central do Limite)</p>
+<section class="definition-content" id="proof-content">
+<p>Sejam <span class="math notranslate nohighlight">\(X_1, X_2, \ldots\)</span> variáveis aleatórias i.i.d. com média <span class="math notranslate nohighlight">\(\mu\)</span> e variância <span class="math notranslate nohighlight">\(\sigma^2 &lt; \infty\)</span>. Então:
+$<span class="math notranslate nohighlight">\( \frac{\sqrt{n}}{\sigma}\left(\frac{1}{n}\sum_{i=1}^n X_i - \mu\right) \xrightarrow{d} N(0,1) \)</span><span class="math notranslate nohighlight">\(
+onde \)</span>\xrightarrow{d}$ denota convergência em distribuição.</p>
+</section>
+</div><div class="proof definition admonition" id="momentos">
+<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Momentos)</p>
+<section class="definition-content" id="proof-content">
+<p>O <strong><span class="math notranslate nohighlight">\(k\)</span>-ésimo momento</strong> de uma variável aleatória <span class="math notranslate nohighlight">\(X\)</span> é definido como:
+$<span class="math notranslate nohighlight">\( \mu_k = E[X^k] \)</span><span class="math notranslate nohighlight">\(
+O **\)</span>k<span class="math notranslate nohighlight">\(-ésimo momento central** é:
+\)</span><span class="math notranslate nohighlight">\( \mu'_k = E[(X - E[X])^k] \)</span>$</p>
+</section>
+</div><div class="proof definition admonition" id="funcao-geradora-momentos">
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Função Geradora de Momentos)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>função geradora de momentos</strong> de <span class="math notranslate nohighlight">\(X\)</span> é:
+$<span class="math notranslate nohighlight">\( M_X(t) = E[e^{tX}] \)</span><span class="math notranslate nohighlight">\(
+desde que a esperança exista para \)</span>t$ em algum intervalo aberto contendo zero.</p>
+</section>
+</div><div class="proof definition admonition" id="funcao-caracteristica">
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Função Característica)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>função característica</strong> de <span class="math notranslate nohighlight">\(X\)</span> é:
+$<span class="math notranslate nohighlight">\( \phi_X(t) = E[e^{itX}] \)</span><span class="math notranslate nohighlight">\(
+onde \)</span>i$ é a unidade imaginária. Existe para toda variável aleatória.</p>
+</section>
+</div><div class="proof definition admonition" id="paradoxo-bertrand">
+<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Paradoxo de Bertrand)</p>
+<section class="definition-content" id="proof-content">
+<p>O <strong>paradoxo de Bertrand</strong> ilustra que a probabilidade de uma corda aleatória em um círculo ser maior que o lado do triângulo equilátero inscrito pode ter diferentes valores (1/2, 1/3 ou 1/4) dependendo do método de seleção da “corda aleatória”.</p>
+</section>
+</div></div>
+<section id="id1">
+<h2>Conceitos Fundamentais<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Uma <strong>distribuição de probabilidade</strong> descreve como a probabilidade é distribuída entre os possíveis valores de uma variável aleatória. Entre as propriedades básicas estão:</p>
+<ul class="simple">
+<li><p>Não-negatividade: <span class="math notranslate nohighlight">\(P(x) \geq 0\)</span></p></li>
+<li><p>Normalização: <span class="math notranslate nohighlight">\(\sum_x P(x) = 1\)</span> ou <span class="math notranslate nohighlight">\(\int P(x) dx = 1\)</span></p></li>
+<li><p>Esperança: <span class="math notranslate nohighlight">\(\mathbb{E}[X] = \sum_x x P(x)\)</span></p></li>
+<li><p>Variância: <span class="math notranslate nohighlight">\(\mathbb{V}[X] = \mathbb{E}[(X - \mu)^2]\)</span></p></li>
 </ul>
-<div class="definition docutils">
-<p>Uma função <span class="math notranslate nohighlight">\(f: X \to \mathbb{R} \cup \{\pm\infty\}\)</span> é <strong>mensurável</strong> se, para todo <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>, o conjunto <span class="math notranslate nohighlight">\(\{x \in X : f(x) &gt; a\}\)</span> pertence à <span class="math notranslate nohighlight">\(\sigma\)</span>-álgebra <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>.</p>
-</div>
-<div class="definition docutils">
-<p>A <strong>integral de Lebesgue</strong> de uma função mensurável <span class="math notranslate nohighlight">\(f\)</span> em relação a uma medida <span class="math notranslate nohighlight">\(\mu\)</span> é definida como:</p>
+</section>
+<section id="distribuicoes-discretas-e-continuas">
+<h2>Distribuições Discretas e Contínuas<a class="headerlink" href="#distribuicoes-discretas-e-continuas" title="Link to this heading">#</a></h2>
+<section id="distribuicao-binomial">
+<h3>Distribuição Binomial<a class="headerlink" href="#distribuicao-binomial" title="Link to this heading">#</a></h3>
+<p>Modelo para o número de sucessos em <span class="math notranslate nohighlight">\(n\)</span> ensaios de Bernoulli:</p>
 <div class="math notranslate nohighlight">
-\[\int_X f \, d\mu := \sup\left\{\int_X s \, d\mu : s \leq f, s \text{ simples} \right\}\]</div>
-<p>Essa definição permite integrar funções mais gerais do que a integral de Riemann.</p>
-</div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-```{admonition} Click here!
-:class: tip, dropdown
-``````{include} 03-02-probabilidade.md
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-## Conceitos Fundamentais
-
-Uma **distribuição de probabilidade** descreve como a probabilidade é distribuída entre os possíveis valores de uma variável aleatória. Entre as propriedades básicas estão:
-
-* Não-negatividade: $P(x) \geq 0$
-* Normalização: $\sum_x P(x) = 1$ ou $\int P(x) dx = 1$
-* Esperança: $\mathbb{E}[X] = \sum_x x P(x)$
-* Variância: $\mathbb{V}[X] = \mathbb{E}[(X - \mu)^2]$
-
-## Distribuições Discretas e Contínuas
-
-### Distribuição Binomial
-
-Modelo para o número de sucessos em $n$ ensaios de Bernoulli:
-
-```{math}
-P(k) = \binom{n}{k} p^k (1 - p)^{n - k}
-</pre></div>
-</div>
+\[P(k) = \binom{n}{k} p^k (1 - p)^{n - k}\]</div>
+</section>
 <section id="distribuicao-de-poisson">
-<h2>Distribuição de Poisson<a class="headerlink" href="#distribuicao-de-poisson" title="Link to this heading">#</a></h2>
+<h3>Distribuição de Poisson<a class="headerlink" href="#distribuicao-de-poisson" title="Link to this heading">#</a></h3>
 <p>Limite da binomial para <span class="math notranslate nohighlight">\(n \to \infty\)</span> e <span class="math notranslate nohighlight">\(p \to 0\)</span> com <span class="math notranslate nohighlight">\(\lambda = np\)</span> fixo:</p>
 <div class="math notranslate nohighlight">
 \[P(k) = \frac{\lambda^k e^{-\lambda}}{k!}\]</div>
 </section>
 <section id="distribuicao-normal-gaussiana">
-<h2>Distribuição Normal (Gaussiana)<a class="headerlink" href="#distribuicao-normal-gaussiana" title="Link to this heading">#</a></h2>
+<h3>Distribuição Normal (Gaussiana)<a class="headerlink" href="#distribuicao-normal-gaussiana" title="Link to this heading">#</a></h3>
 <p>Distribuição contínua simétrica em torno da média <span class="math notranslate nohighlight">\(\mu\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[P(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}\]</div>
+</section>
 </section>
 <section id="o-teorema-central-do-limite">
 <h2>O Teorema Central do Limite<a class="headerlink" href="#o-teorema-central-do-limite" title="Link to this heading">#</a></h2>
@@ -534,11 +566,8 @@ Se <span class="math notranslate nohighlight">\(X_i\)</span> são variáveis ale
 </section>
 <section id="apendices">
 <h2>Apêndices<a class="headerlink" href="#apendices" title="Link to this heading">#</a></h2>
-<section id="medida-e-integracao">
-<h3><a class="reference internal" href="#capitulos/01-integrais-gaussianas/03-01-medidas"><span class="xref myst">Medida e Integração</span></a><a class="headerlink" href="#medida-e-integracao" title="Link to this heading">#</a></h3>
-</section>
-<section id="probabilidade">
-<h3><a class="reference internal" href="#capitulos/01-integrais-gaussianas/03-02-probabilidade"><span class="xref myst">Probabilidade</span></a><a class="headerlink" href="#probabilidade" title="Link to this heading">#</a></h3>
+<section id="medida-integracao-e-probabilidades">
+<h3><a class="reference internal" href="#capitulos/01-integrais-gaussianas/03-01-medidas"><span class="xref myst">Medida, Integração e Probabilidades</span></a><a class="headerlink" href="#medida-integracao-e-probabilidades" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -589,7 +618,7 @@ Se <span class="math notranslate nohighlight">\(X_i\)</span> são variáveis ale
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conceitos Fundamentais: Teoria de Conjuntos, Medidas e Integração</p>
+        <p class="prev-next-title">Conceitos Fundamentais:</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -611,12 +640,16 @@ Se <span class="math notranslate nohighlight">\(X_i\)</span> são variáveis ale
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Distribuições de Probabilidade</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#capitulo-03-conceitos-fundamentais">Capítulo 03: Conceitos Fundamentais</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-poisson">Distribuição de Poisson</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-normal-gaussiana">Distribuição Normal (Gaussiana)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conceitos Fundamentais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicoes-discretas-e-continuas">Distribuições Discretas e Contínuas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-binomial">Distribuição Binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-de-poisson">Distribuição de Poisson</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuicao-normal-gaussiana">Distribuição Normal (Gaussiana)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-teorema-central-do-limite">O Teorema Central do Limite</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apendices">Apêndices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medida-e-integracao"><span class="xref myst">Medida e Integração</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidade"><span class="xref myst">Probabilidade</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medida-integracao-e-probabilidades"><span class="xref myst">Medida, Integração e Probabilidades</span></a></li>
 </ul>
 </li>
 </ul>

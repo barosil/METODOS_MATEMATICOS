@@ -1,11 +1,13 @@
 # Conceitos Fundamentais: Probabilidade e Estatística
 
 ::::md
+
 ```{prf:definition}
 :label: espaco-amostral
 
 O **espaço amostral** $\Omega$ é o conjunto de todos os resultados possíveis de um experimento aleatório.
 ```
+
 ::::
 
 

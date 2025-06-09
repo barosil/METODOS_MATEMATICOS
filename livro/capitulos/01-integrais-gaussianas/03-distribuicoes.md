@@ -4,15 +4,13 @@
 
 Este capítulo apresenta os conceitos essenciais que servem como base matemática para o estudo das distribuições de probabilidade, integrais especiais e métodos estatísticos aplicados à física e outras áreas da ciência.
 
-
-```{admonition} Click here!
-
+:::{admonition} Click here!
 :class: tip, dropdown
 
-``````{include} 03-01-medidas.md
-``````
-
+```{include} 03-01-medidas.md
 ```
+
+:::
 
 
 
