@@ -1,0 +1,41 @@
+livro:
+  - Prefácio:
+  - Introdução:
+  - Noções de Teoria de Conjuntos e Estruturas Matemáticas:
+    - Teoria Ingênua de Conjuntos:
+    - Paradoxos de teorias de conjuntos:
+    - Axiomas de Zermelo-Fraenkel:
+    - Estruturas Matemáticas:
+    - Conjuntos Numéricos:
+      - Números Inteiros:
+      - Números Racionais:
+      - Números Reais:
+      - Números Complexos:
+    - Álgebras de Divisão:
+  - Distribuições de Probabilidade:
+    - O tabuleiro de Galton:
+    - Distribuições Discretas:
+      - Distribuição Binomial:
+      - Distribuição de Poisson:
+    - Axiomas da Probabilidade:
+    - Calculando Integrais:
+      - A integral gaussiana:
+      - A função gamma de Euler:
+    - Distribuições Contínuas:
+      - Distribuição Normal:
+      - Distribuição Uniforme:
+      - Distribuição Gama:
+      - Distribuição Beta:
+    - Alguns comentários sobre o teorema central do limite:
+    - A integral gaussiana em n-dimensões:
+  - Séries Infinitas:
+  - Números Complexos:
+  - Matrizes e Determinantes:
+  - Autovalores e Autovetores:
+  - Uma primeira visão sobre o grupo de rotações:
+  - Uma álgebra de Lie:
+  - Variedades Diferenciáveis:
+  - O operador Laplaciano:
+  - Introdução à Teoria de Grupos:
+  - Cálculo de Variações:
+  - Geometria Diferencial:
