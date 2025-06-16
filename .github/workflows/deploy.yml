@@ -33,13 +33,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build the book
-        run: make build
+        run: make toc; make build
         
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "_build/html"
+          path: "_build/_build/html"
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
