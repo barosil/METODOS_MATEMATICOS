@@ -15,7 +15,8 @@ logo: imgs/frontmatter/UAF_LOGO.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-
+launch_buttons:
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
 # Define the name of the latex output file for PDF builds
 # latex:
   # latex_documents:
@@ -27,7 +28,7 @@ bibtex_bibfiles:
 
 repository:
   url: https://github.com/barosil/METODOS_MATEMATICOS.git  # Use HTTPS em vez de SSH
-  path_to_book: "livro"  # Mantenha como está se este for o caminho correto
+  path_to_book: "content"  # Mantenha como está se este for o caminho correto
   branch: main  # Mantenha como está
 
 

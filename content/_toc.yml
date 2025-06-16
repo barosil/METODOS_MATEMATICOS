@@ -1,50 +1,56 @@
 format: jb-book
 root: index
 chapters:
-- file: CAP_01/CAP_01
-- file: CAP_02/CAP_02
-- file: CAP_03/CAP_03
-  sections:
-  - file: CAP_03/SEC_03_01/SEC_03_01
-  - file: CAP_03/SEC_03_02/SEC_03_02
-  - file: CAP_03/SEC_03_03/SEC_03_03
-  - file: CAP_03/SEC_03_04/SEC_03_04
-  - file: CAP_03/SEC_03_05/SEC_03_05
+  - file: CAP_01/CAP_01
+  - file: CAP_02/CAP_02
+  - file: CAP_03/CAP_03
     sections:
-    - file: CAP_03/SEC_03_05/SEC_05_01/SEC_05_01
-    - file: CAP_03/SEC_03_05/SEC_05_02/SEC_05_02
-    - file: CAP_03/SEC_03_05/SEC_05_03/SEC_05_03
-    - file: CAP_03/SEC_03_05/SEC_05_04/SEC_05_04
-  - file: CAP_03/SEC_03_06/SEC_03_06
-- file: CAP_04/CAP_04
-  sections:
-  - file: CAP_04/SEC_04_01/SEC_04_01
-  - file: CAP_04/SEC_04_02/SEC_04_02
+    - file: CAP_03/SEC_03_01/SEC_03_01
+    - file: CAP_03/SEC_03_02/SEC_03_02
+    - file: CAP_03/SEC_03_03/SEC_03_03
+    - file: CAP_03/SEC_03_04/SEC_03_04
+    - file: CAP_03/SEC_03_05/SEC_03_05
+      sections:
+      - file: CAP_03/SEC_03_05/SEC_05_01/SEC_05_01
+      - file: CAP_03/SEC_03_05/SEC_05_02/SEC_05_02
+      - file: CAP_03/SEC_03_05/SEC_05_03/SEC_05_03
+      - file: CAP_03/SEC_03_05/SEC_05_04/SEC_05_04
+    - file: CAP_03/SEC_03_06/SEC_03_06
+  - file: CAP_04/CAP_04
     sections:
-    - file: CAP_04/SEC_04_02/SEC_02_01/SEC_02_01
-    - file: CAP_04/SEC_04_02/SEC_02_02/SEC_02_02
-  - file: CAP_04/SEC_04_03/SEC_04_03
-  - file: CAP_04/SEC_04_04/SEC_04_04
-    sections:
-    - file: CAP_04/SEC_04_04/SEC_04_01/SEC_04_01
-    - file: CAP_04/SEC_04_04/SEC_04_02/SEC_04_02
-  - file: CAP_04/SEC_04_05/SEC_04_05
-    sections:
-    - file: CAP_04/SEC_04_05/SEC_05_01/SEC_05_01
-    - file: CAP_04/SEC_04_05/SEC_05_02/SEC_05_02
-    - file: CAP_04/SEC_04_05/SEC_05_03/SEC_05_03
-    - file: CAP_04/SEC_04_05/SEC_05_04/SEC_05_04
-  - file: CAP_04/SEC_04_06/SEC_04_06
-  - file: CAP_04/SEC_04_07/SEC_04_07
-- file: CAP_05/CAP_05
-- file: CAP_06/CAP_06
-- file: CAP_07/CAP_07
-- file: CAP_08/CAP_08
-- file: CAP_09/CAP_09
-- file: CAP_10/CAP_10
-- file: CAP_11/CAP_11
-- file: CAP_12/CAP_12
-- file: CAP_13/CAP_13
-- file: CAP_14/CAP_14
-- file: CAP_15/CAP_15
-
+    - file: CAP_04/SEC_04_01/CAP_04
+      sections:
+      - file: CAP_04/SEC_04_02/SEC_02_01/SEC_02_01
+      - file: CAP_04/SEC_04_02/SEC_02_02/03-distribuicoes
+      - file: CAP_04/SEC_04_02/SEC_02_02/SEC_02_02
+    - file: CAP_04/SEC_04_02/SEC_04_02
+    - file: CAP_04/SEC_04_03/03-01-medidas
+    - file: CAP_04/SEC_04_03/SEC_04_03
+    - file: CAP_04/SEC_04_04/04-integral-gaussiana
+      sections:
+      - file: CAP_04/SEC_04_04/SEC_04_01/SEC_04_01
+      - file: CAP_04/SEC_04_04/SEC_04_02/05-extensoes
+      - file: CAP_04/SEC_04_04/SEC_04_02/SEC_04_02
+    - file: CAP_04/SEC_04_04/SEC_04_04
+    - file: CAP_04/SEC_04_05/06-funcao-gama
+    - file: CAP_04/SEC_04_05/SEC_04_05
+      sections:
+      - file: CAP_04/SEC_04_05/SEC_05_01/SEC_05_01
+      - file: CAP_04/SEC_04_05/SEC_05_02/SEC_05_02
+      - file: CAP_04/SEC_04_05/SEC_05_03/SEC_05_03
+      - file: CAP_04/SEC_04_05/SEC_05_04/07-stirling
+      - file: CAP_04/SEC_04_05/SEC_05_04/SEC_05_04
+    - file: CAP_04/SEC_04_06/08-integral-ndimensoes
+    - file: CAP_04/SEC_04_06/SEC_04_06
+    - file: CAP_04/SEC_04_07/SEC_04_07
+  - file: CAP_05/CAP_05
+  - file: CAP_06/CAP_06
+  - file: CAP_07/CAP_07
+  - file: CAP_08/CAP_08
+  - file: CAP_09/CAP_09
+  - file: CAP_10/CAP_10
+  - file: CAP_11/CAP_11
+  - file: CAP_12/CAP_12
+  - file: CAP_13/CAP_13
+  - file: CAP_14/CAP_14
+  - file: CAP_15/CAP_15

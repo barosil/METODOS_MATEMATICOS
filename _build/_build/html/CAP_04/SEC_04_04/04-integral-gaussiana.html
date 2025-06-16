@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>A Integral Gaussiana &#8212; Métodos de Física Matemática</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-prolog.css?v=c1617293" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jquery-ui.min.css?v=711a7f8d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/lpn.css?v=a05dc249" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/jquery.js?v=3d1d8b85"></script>
+    <script src="../../_static/jquery-ui.min.js?v=27a1b71a"></script>
+    <script src="../../_static/lpn.js?v=199b1815"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CAP_04/SEC_04_04/04-integral-gaussiana';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="A integral gaussiana" href="SEC_04_01/SEC_04_01.html" />
+    <link rel="prev" title="Axiomas da Probabilidade" href="../SEC_04_03/SEC_04_03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/UAF_LOGO.png" class="logo__image only-light" alt="Métodos de Física Matemática - Home"/>
+    <script>document.write(`<img src="../../_static/UAF_LOGO.png" class="logo__image only-dark" alt="Métodos de Física Matemática - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_01/CAP_01.html">Prefácio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_02/CAP_02.html">Introdução</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../CAP_03/CAP_03.html">Noções de Teoria de Conjuntos e Estruturas Matemáticas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../CAP_03/SEC_03_01/SEC_03_01.html">Teoria Ingênua de Conjuntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../CAP_03/SEC_03_02/SEC_03_02.html">Paradoxos de teorias de conjuntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../CAP_03/SEC_03_03/SEC_03_03.html">Axiomas de Zermelo-Fraenkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../CAP_03/SEC_03_04/SEC_03_04.html">Estruturas Matemáticas</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../CAP_03/SEC_03_05/SEC_03_05.html">Conjuntos Numéricos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../CAP_03/SEC_03_05/SEC_05_01/SEC_05_01.html">Números Inteiros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CAP_03/SEC_03_05/SEC_05_02/SEC_05_02.html">Números Racionais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CAP_03/SEC_03_05/SEC_05_03/SEC_05_03.html">Números Reais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CAP_03/SEC_03_05/SEC_05_04/SEC_05_04.html">Números Complexos</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../CAP_03/SEC_03_06/SEC_03_06.html">Álgebras de Divisão</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../CAP_04.html">DIstribuições de Probabilidade, Integrais Gaussianas e a Função Gama de Euler.</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../SEC_04_01/CAP_04.html">Tabuleiro de Galton</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_02/SEC_02_01/SEC_02_01.html">Distribuição Binomial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_02/SEC_02_02/03-distribuicoes.html">Distribuições de Probabilidade</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_02/SEC_02_02/SEC_02_02.html">Distribuição de Poisson</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_02/SEC_04_02.html">Distribuições Discretas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_03/03-01-medidas.html">Conceitos Fundamentais:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_03/SEC_04_03.html">Axiomas da Probabilidade</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">A Integral Gaussiana</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="SEC_04_01/SEC_04_01.html">A integral gaussiana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SEC_04_02/05-extensoes.html">Extensões da Integral Gaussiana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SEC_04_02/SEC_04_02.html">A função gamma de Euler</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="SEC_04_04.html">Calculando Integrais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_05/06-funcao-gama.html">A Função Gama</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../SEC_04_05/SEC_04_05.html">Distribuições Contínuas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_05/SEC_05_01/SEC_05_01.html">Distribuição Normal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_05/SEC_05_02/SEC_05_02.html">Distribuição Uniforme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_05/SEC_05_03/SEC_05_03.html">Distribuição Gama</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_05/SEC_05_04/07-stirling.html">Aproximação de Stirling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SEC_04_05/SEC_05_04/SEC_05_04.html">Distribuição Beta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_06/08-integral-ndimensoes.html">This is a stub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_06/SEC_04_06.html">Alguns comentários sobre o teorema central do limite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SEC_04_07/SEC_04_07.html">A integral gaussiana em n-dimensões</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_05/CAP_05.html">Séries Infinitas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_06/CAP_06.html">Números Complexos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_07/CAP_07.html">Matrizes e Determinantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_08/CAP_08.html">Autovalores e Autovetores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_09/CAP_09.html">Uma primeira visão sobre o grupo de rotações</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_10/CAP_10.html">Uma álgebra de Lie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_11/CAP_11.html">Variedades Diferenciáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_12/CAP_12.html">O operador Laplaciano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_13/CAP_13.html">Introdução à Teoria de Grupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_14/CAP_14.html">Cálculo de Variações</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CAP_15/CAP_15.html">Geometria Diferencial</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/barosil/METODOS_MATEMATICOS.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/CAP_04/SEC_04_04/04-integral-gaussiana.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>A Integral Gaussiana</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-integral">Cálculo da Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-integral-dupla">Método da Integral Dupla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemento-de-volume-e-metrica">Elemento de Volume e Métrica</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="a-integral-gaussiana">
+<h1>A Integral Gaussiana<a class="headerlink" href="#a-integral-gaussiana" title="Link to this heading">#</a></h1>
+<section id="calculo-da-integral">
+<h2>Cálculo da Integral<a class="headerlink" href="#calculo-da-integral" title="Link to this heading">#</a></h2>
+<p>A integral da função gaussiana é um resultado fundamental:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}\]</div>
+<p>Como a primitiva de <span class="math notranslate nohighlight">\(e^{-x^2}\)</span> não é elementar, o método de resolução envolve a transformação em coordenadas polares.</p>
+</section>
+<section id="metodo-da-integral-dupla">
+<h2>Método da Integral Dupla<a class="headerlink" href="#metodo-da-integral-dupla" title="Link to this heading">#</a></h2>
+<p>Considere:</p>
+<div class="math notranslate nohighlight">
+\[I = \left( \int_{-\infty}^{\infty} e^{-x^2} dx \right)^2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^2 + y^2)} dx\,dy\]</div>
+<p>Em coordenadas polares:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_0^{2\pi} d\theta \int_0^{\infty} e^{-r^2} r\,dr\]</div>
+<p>A substituição <span class="math notranslate nohighlight">\(u = r^2 \Rightarrow du = 2r\,dr\)</span> leva a:</p>
+<div class="math notranslate nohighlight">
+\[I = 2\pi \cdot \frac{1}{2} \int_0^{\infty} e^{-u} du = \pi\]</div>
+<p>Portanto:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}\]</div>
+</section>
+<section id="elemento-de-volume-e-metrica">
+<h2>Elemento de Volume e Métrica<a class="headerlink" href="#elemento-de-volume-e-metrica" title="Link to this heading">#</a></h2>
+<p>Em coordenadas cartesianas:</p>
+<div class="math notranslate nohighlight">
+\[dA = dx\,dy\]</div>
+<p>Em coordenadas polares, o elemento de área envolve o determinante da métrica:</p>
+<div class="math notranslate nohighlight">
+\[dA = \sqrt{g}\,dr\,d\theta = r\,dr\,d\theta\]</div>
+<p>Aqui, <span class="math notranslate nohighlight">\(g = \det \begin{pmatrix}1 &amp; 0 \\ 0 &amp; r^2\end{pmatrix} = r^2\)</span>, então <span class="math notranslate nohighlight">\(\sqrt{g} = r\)</span>.</p>
+<p>:::{note}
+Esse método será estendido mais adiante para o caso de <span class="math notranslate nohighlight">\(n\)</span> dimensões.
+:::</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./CAP_04/SEC_04_04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../SEC_04_03/SEC_04_03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Axiomas da Probabilidade</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="SEC_04_01/SEC_04_01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">A integral gaussiana</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-da-integral">Cálculo da Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-da-integral-dupla">Método da Integral Dupla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemento-de-volume-e-metrica">Elemento de Volume e Métrica</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="mailto:lbarosi@df.ufcg.edu.br</a> , Universidade Federal de Campina Grande, Brasil
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025–2034.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
